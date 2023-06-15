@@ -1,9 +1,11 @@
-/* App.css */
-
 .container {
   max-width: 400px;
   margin: 0 auto;
   padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
 }
 
 h1 {
@@ -12,6 +14,8 @@ h1 {
 
 .todo-form {
   display: flex;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 20px;
 }
 
@@ -33,6 +37,9 @@ h1 {
 .todo-list {
   list-style: none;
   padding: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .todo-item {
@@ -51,6 +58,7 @@ h1 {
 }
 
 .todo-item button {
+  margin: 5px;
   padding: 6px 10px;
   background-color: #dc3545;
   color: #fff;
