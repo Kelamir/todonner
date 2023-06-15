@@ -1,7 +1,7 @@
 import { create } from "zustand";
 
 interface stateBox {
-  tasksCount: number,
+  tasksCount: number;
   increaseCount: (by: number) => void;
   resetCount: (by: 0) => void;
 
@@ -11,10 +11,10 @@ interface stateBox {
 
 export const useStateBox = create<stateBox>()((set) => ({
   tasksCount: 0,
-  increaseCount: () =>
-    set((state) => ({ tasksCount: state.tasksCount + 1 })),
+  increaseCount: () => set((state) => ({ tasksCount: state.tasksCount + 1 })),
   resetCount: () => set({ tasksCount: 0 }),
 
   tasksList: [],
-  addTask: (task) => set((state) => ({tasksList: [...state.tasksList, task]}))
+  addTask: (task) =>
+    set((state) => ({ tasksList: [...state.tasksList, task] })),
 }));
