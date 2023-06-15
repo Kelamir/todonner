@@ -8,6 +8,7 @@ interface stateBox {
 
   tasksList: string[];
   addTask: (task: string) => void;
+  deleteTask: (taskId: number) => void;
 }
 
 export const useStateBox = create<stateBox>()(
@@ -21,6 +22,11 @@ export const useStateBox = create<stateBox>()(
       tasksList: [],
       addTask: (task) =>
         set((state) => ({ tasksList: [...state.tasksList, task] })),
+
+      deleteTask: (taskId) =>
+        set((state) => ({
+          tasksList: state.tasksList.filter((_, index) => index !== taskId),
+        })),
     })),
     {
       name: "Todonner stateBox",

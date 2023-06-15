@@ -22,29 +22,23 @@ function AddTaskForm() {
   );
 }
 
-function DisplayTasks() {
-  const tasks = useStateBox((state) => state.tasksList);
-
-  return (
-    <>
-      <ul className="todo-list">
-        {tasks.map((task, i) => (
-          <li className="todo-item">
-            {task} <button>Delete</button>
-          </li>
-        ))}
-      </ul>
-    </>
-  );
-}
-
 function App() {
+  const tasks = useStateBox((state) => state.tasksList);
+  const deleteTask = useStateBox((state) => state.deleteTask);
+
   return (
     <div className="container">
       <h1>Todonner</h1>
 
       <AddTaskForm />
-      <DisplayTasks />
+
+      <ul className="todo-list">
+        {tasks.map((task, i) => (
+          <li className="todo-item">
+            {task} <button onClick={() => deleteTask(i)}>Delete</button>
+          </li>
+        ))}
+      </ul>
     </div>
   );
 }
