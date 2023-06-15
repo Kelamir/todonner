@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import "./App.css";
 import { useStateBox } from "./utils/state";
 
@@ -25,6 +26,10 @@ function AddTaskForm() {
 function App() {
   const tasks = useStateBox((state) => state.tasksList);
   const deleteTask = useStateBox((state) => state.deleteTask);
+
+  useEffect(() => {
+    document.title = "Todonner";
+  }, []);
 
   return (
     <div className="container">
