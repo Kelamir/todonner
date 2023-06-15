@@ -25,7 +25,17 @@ function AddTaskForm() {
 function DisplayTasks() {
   const tasks = useStateBox((state) => state.tasksList);
 
-  return <div>{tasks}</div>;
+  return (
+    <>
+      <ul className="todo-list">
+        {tasks.map((task, i) => (
+          <li className="todo-item">
+            {task} <button>Delete</button>
+          </li>
+        ))}
+      </ul>
+    </>
+  );
 }
 
 function App() {
@@ -35,15 +45,6 @@ function App() {
 
       <AddTaskForm />
       <DisplayTasks />
-
-      <ul className="todo-list">
-        <li className="todo-item">
-          Task 1 <button>Delete</button>
-        </li>
-        <li className="todo-item">
-          Task 2 <button>Delete</button>
-        </li>
-      </ul>
     </div>
   );
 }
