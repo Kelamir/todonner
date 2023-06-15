@@ -57,7 +57,7 @@ button {
 .todo-item button {
   margin-left: auto;
   padding: 6px 10px;
-  background-color: #dc3545;
+  background-color: green;
   color: #fff;
   border: none;
   cursor: pointer;

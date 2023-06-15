@@ -40,7 +40,7 @@ function App() {
       <ul className="todo-list">
         {tasks.map((task, i) => (
           <li className="todo-item">
-            {task} <button onClick={() => deleteTask(i)}>Delete</button>
+            {task} <button onClick={() => deleteTask(i)}>Done</button>
           </li>
         ))}
       </ul>
