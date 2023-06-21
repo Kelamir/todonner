@@ -1,60 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-  background-color: #202020;
+  background-color: #1f1f1f;
   color: #fff;
-  font-family: Arial, sans-serif;
+  font-family: 'Roboto', Arial, sans-serif;
+  line-height: 1.5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
 }
 
 .container {
   max-width: 600px;
-  margin: 0 auto;
-  padding: 20px;
+  width: 100%;
+  padding: 30px;
+  background-color: #2c2c2c;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
 .header {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  margin-bottom: 20px;
+  margin-bottom: 30px;
 }
 
 .header h1 {
-  font-size: 24px;
+  font-size: 32px;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  margin: 0;
 }
 
 .todo-list {
   list-style: none;
   padding: 0;
+  margin: 0;
 }
 
 .todo-list-item {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  border-bottom: 1px solid #444;
-}
-
-.todo-list-item:last-child {
-  border-bottom: none;
+  padding: 15px;
+  border-radius: 5px;
+  background-color: #333;
+  margin-bottom: 15px;
 }
 
 .todo-list-item .text {
   flex-grow: 1;
+  font-size: 18px;
+  font-weight: 400;
 }
 
 .todo-list-item .actions {
-  margin-left: 10px;
+  display: flex;
 }
 
 .todo-list-item .actions button {
-  background-color: #333;
+  background-color: #444;
   border: none;
   color: #fff;
-  padding: 5px 10px;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 5px;
   cursor: pointer;
+  transition: background-color 0.2s;
 }
 
-.todo-list-item .actions button:hover {
+.todo-list-item .actions button:hover {P
   background-color: #555;
 }
 
