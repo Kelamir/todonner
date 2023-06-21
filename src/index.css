@@ -72,7 +72,7 @@ body {
   transition: background-color 0.2s;
 }
 
-.todo-list-item .actions button:hover {P
+.todo-list-item .actions button:hover {
   background-color: #555;
 }
 
